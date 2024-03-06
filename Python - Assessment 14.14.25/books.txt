@@ -1,0 +1,20 @@
+Title,Genre,Author,Price
+To Kill a Mockingbird,Fiction,Harper Lee,12.99
+1984,Science Fiction,George Orwell,10.50
+The Great Gatsby,Classic,F. Scott Fitzgerald,11.25
+Pride and Prejudice,Romance,Jane Austen,9.99
+The Catcher in the Rye,Coming-of-age,J.D. Salinger,10.75
+Lord of the Flies,Adventure,William Golding,9.25
+Animal Farm,Political Satire,George Orwell,8.99
+Brave New World,Dystopian,Aldous Huxley,11.50
+The Hobbit,Fantasy,J.R.R. Tolkien,12.25
+Gone with the Wind,Historical Fiction,Margaret Mitchell,13.99
+Moby-Dick,Adventure,Herman Melville,10.99
+The Lord of the Rings,Fantasy,J.R.R. Tolkien,15.50
+The Grapes of Wrath,Classic,John Steinbeck,11.75
+The Picture of Dorian Gray,Horror,Oscar Wilde,9.25
+Frankenstein,Gothic Fiction,Mary Shelley,10.99
+Dracula,Gothic Horror,Bram Stoker,8.75
+Anna Karenina,Romance,Tolstoy,12.50
+War and Peace,Historical Fiction,Tolstoy,14.99
+The Adventures of Huckleberry Finn,Adventure,Mark Twain,9.75
