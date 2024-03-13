@@ -1,32 +1,47 @@
 Andrew Anderson Data and Business Analytics Portfolio
 
-Welcome to my GitHub repository showcasing a collection of projects focusing on Business Analysis and Data Analytics. This portfolio demonstrates my skills in various tools and technologies commonly used in the field of data and business analytics.
+Welcome to my GitHub repository showcasing my personal projects focusing on Business Analysis and Data Analytics. This portfolio demonstrates my skills in various tools and technologies commonly used in the field of data and business analytics.
+
+-------------------
+
+How To Use
+
+Each folder contains both the code / relevant tool source file, a .docx or .pdf of the documentaion for the project: detailing the steps I took and why I took them, the outcome and insights of the project, and finally an export of the  outcome that would be used for presentation.
+
+-------------------
 
 Projects
 
 1. Business Analysis - Functional Specification
 
-This project involves the creation of functional specifications for business analysis purposes. It includes documentation outlining the requirements, features, and functionalities of software or systems to meet specific business needs. The documentation follows industry standards and best practices for effective communication between stakeholders and development teams.
+This project focuses on addressing a business requirement for a trading analysis application.
+
+This project involves the creation of functional specifications for business analysis purposes. It includes documentation and visuals outlining the requirements, features, and functionalities to meet specific business needs. The documentation follows industry standards and best practices for effective communication between stakeholders and development teams.
 
 2. Data Analysis - Excel
 
 This project focuses on analysing the Sales performance of an Office Supplies store in the US.
+
 In this project, I demonstrate proficiency in data analysis using Microsoft Excel. I showcase my ability to perform data manipulation, visualisation, and interpretation using Excel's powerful features. This project highlights my skills in handling and analysing data to derive valuable insights for decision-making purposes.
 
 3. Data Analysis - Power BI
 
 This project focuses on comparing global GDP growth rates.
+
 Utilising Microsoft Power BI, this project focuses on creating interactive dashboards and visualisations for data analysis. I leverage Power BI's capabilities to connect to different data sources, transform raw data into meaningful insights, and present them in a visually appealing and understandable format. The project demonstrates my abilities in data visualisation and storytelling using Power BI.
 
 4. Data Analysis - SQL
 
 This project focuses on querying an employee database and answering a series of questions.
+
 This project involves data analysis and manipulation using SQL (Structured Query Language), in MySQL. I showcase my ability to query databases, perform data transformations, and extract valuable insights from structured data sources. Through SQL queries, I demonstrate proficiency in handling large datasets and generating meaningful reports for business intelligence.
 
 5. Software Development - Python
 
 This project focuses on building a terminal based, online bookstore.
 In this project, I showcase my software development skills using Python programming language. I demonstrate the application of Python for data manipulation, analysis, and visualisation tasks. The project includes scripts and notebooks illustrating various data processing techniques, statistical analysis, and machine learning algorithms implemented in Python for solving real-world business problems.
+
+-------------------
 
 About Me
 
@@ -37,6 +52,8 @@ I gained an insight into the world of analytics in a previous role where a piece
 This gave me a massively rewarding feeling and made me curious about the real positive impact that effective analytics can have. Following that curiosity led me to learning SQL and Tableau in my spare time using online resources, and recently landed me on an intensive Data and Business Analytics training course and internship, covering both of those topics, and many more in great depth.
 
 Having gained confidence in those skills, I am now pursuing roles in Analytics, and believe that I would thrive in an analytics position that supports my growth as an Early-in-Career professional.
+
+-------------------
 
 Contact Me
 
