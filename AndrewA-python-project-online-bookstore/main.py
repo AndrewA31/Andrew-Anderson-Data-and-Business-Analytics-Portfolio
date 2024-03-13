@@ -1,6 +1,6 @@
 from book import Book, book_search, basket, add_book
 
-from login import authenticate_user, create_user, user_exists, account_details
+from login import login_page, account_details, update_user
 
 from checkout import member_checkout, guest_checkout
 
@@ -30,50 +30,7 @@ def member_menu():
 # Login logic
 
 
-# Login Menu        
-def login_page():
-    print("**********************************************")
-    print("*             Welcome to BookIo!             *")
-    print("**********************************************")
 
-    user_email = None
-    is_guest = False
-
-    membership_response = input("Do you have an account? Y / N ").lower()
-
-    if membership_response == 'y':
-        while True:    
-            user_email = input("Please enter your email address: ")
-            user_pw = input("Please enter your password: ")
-            if authenticate_user(user_email, user_pw):
-                print("Logged in successfully as", user_email)
-                break
-            else:
-                print("Invalid email or password.")
-                main()
-            
-
-    elif membership_response == 'n':
-        guest_or_create = input("Would you like to create an account? Y / N ").lower()
-        if guest_or_create == 'y':
-            first_name = input("Please enter your first name: ")
-            last_name = input("Please enter your last name: ")
-            user_email = input("Please enter a valid email address: ").strip()
-            user_pw = input("Please enter a password: ")
-            if user_email == '' or user_pw == '':
-                print("Email or password cannot be empty, please enter a valid email and password.")
-            elif user_exists(user_email):
-                print("Account with that email already exists.")
-            else:
-                create_user(first_name, last_name, user_email, user_pw)
-
-        elif guest_or_create == 'n':
-            print("Proceeding as Guest...")
-            is_guest = True            
-    else:
-        print("Invalid response, please enter 'Y' or 'N'.")
-    
-    return is_guest, user_email
     
 
 # Search Books
@@ -127,7 +84,8 @@ def main():
                 elif guest_menu_choice == '4':
                     exit_store = input("Would you like to exit the store? Y / N: ").lower()
                     if exit_store == 'y':
-                        print("Thank you for shopping at BookIo. Goodbye.")
+                        print("Thank you for shopping at BookIo! Goodbye.")
+                        exit()
                     else:
                         menu()
                     break
@@ -195,8 +153,12 @@ def main():
                     print("**********************************************")
                     print("*              Account Details.              *")
                     print("**********************************************")
+                    print(user_email)
                     account_details(user_email)
-                    menu()
+                    if update_user:
+                        main()
+                    else: 
+                        menu()
                                     
                                 
 
@@ -204,10 +166,11 @@ def main():
                 elif member_menu_choice == '6':
                     exit_store = input("Would you like to exit the store? Y / N: ").lower()
                     if exit_store == 'y':
-                        print("Thank you for shopping at BookIo. Goodbye.")                       
+                        print("Thank you for shopping at BookIo! Goodbye.")
+                        exit()                      
                     else:
                         menu()
-                    break
+                    
 
                 else:
                     print("Invalid Choice, please select one of the options")

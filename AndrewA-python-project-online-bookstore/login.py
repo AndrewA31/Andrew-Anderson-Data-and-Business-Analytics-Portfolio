@@ -1,3 +1,53 @@
+# Login Menu        
+def login_page():
+    print("**********************************************")
+    print("*             Welcome to BookIo!             *")
+    print("**********************************************")
+
+    user_email = None
+    is_guest = False
+
+    membership_response = input("Do you have an account? Y / N ").lower()
+
+    if membership_response == 'y':
+        while True:    
+            user_email = input("Please enter your email address: ")
+            user_pw = input("Please enter your password: ")
+            if authenticate_user(user_email, user_pw):
+                print("Logged in successfully as", user_email)
+                break
+            else:
+                print("Invalid email or password.")
+                #main()
+            
+
+    elif membership_response == 'n':
+        guest_or_create = input("Would you like to create an account? Y / N ").lower()
+        if guest_or_create == 'y':
+            first_name = input("Please enter your first name: ")
+            last_name = input("Please enter your last name: ")
+            user_email = input("Please enter a valid email address: ").strip()
+            user_pw = input("Please enter a password: ")
+            if user_email == '' or user_pw == '':
+                print("Email or password cannot be empty, please enter a valid email and password.")
+            elif user_exists(user_email):
+                print("Account with that email already exists.")
+            else:
+                create_user(first_name, last_name, user_email, user_pw)
+
+        elif guest_or_create == 'n':
+            print("Proceeding as Guest...")
+            is_guest = True            
+    else:
+        print("Invalid response, please enter 'Y' or 'N'.")
+        #main()
+    
+    return is_guest, user_email
+
+
+
+
+
 def authenticate_user(user_email, user_pw):
     with open('user_accounts.txt', 'r') as file:
         for line in file:
@@ -36,7 +86,13 @@ def update_user(user_email, old_details, new_details):
             if user_email in line:
                 for old, new in zip(old_details, new_details):
                     line = line.replace(old, new)
+                    return True
             file.write(line)
+            print("Please sign in again to confirm your account details changes.")
+        else:
+            return False
+            
+
 
 
 
@@ -61,3 +117,5 @@ def account_details(user_email):
                     else:
                         new_details += [new_first_name,new_last_name,new_user_email,new_user_pw]
                         update_user(user_email, old_details, new_details)
+                elif ammend_details == 'n':
+                    update_user = False

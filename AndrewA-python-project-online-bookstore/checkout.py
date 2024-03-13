@@ -15,11 +15,14 @@ def member_checkout(user_email, basket):
     print("**********************************************")
     print("*                 Checkout.                  *")
     print("**********************************************")
-    print(f"Your total will be: {total_price}. Please enter payment details.")
-    print("=================================================================")
-    print("Thank you for shopping at BookIo!")
+    print(f"Your total will be: {total_price}. Please enter payment details...")
+    print("=============================================================")
+    print("Purchase complete.")
     empty_basket()
-
+    quit = input("Would you like to continue shopping? Y / N: ").lower()
+    if quit == 'n':
+        print("Thank you for shopping at BookIo! Goodbye.")
+        exit()
 
 def guest_checkout(basket):
     total_price = 0
@@ -28,7 +31,11 @@ def guest_checkout(basket):
     print("**********************************************")
     print("*                 Checkout.                  *")
     print("**********************************************")
-    print(f"Your total will be: {total_price}. Please enter payment details.")
-    print("=================================================================")
-    print("Thank you for shopping at BookIo!")
+    print(f"Your total will be: {total_price}. Please enter payment details...")
+    print("=============================================================")
+    print("Purchase complete.")
     empty_basket()
+    quit = input("Would you like to continue shopping? Y / N: ").lower()
+    if quit == 'n':
+        print("Thank you for shopping at BookIo! Goodbye.")
+        exit()
